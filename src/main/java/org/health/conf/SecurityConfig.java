@@ -16,9 +16,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public UserDetailsService userDetailsService() {
         var userDetailsService = new InMemoryUserDetailsManager();
-        var user = User.withUsername("John")
+        var user = User.withUsername("baganski")
                 .password("12345")
-                .authorities("read")
+                .authorities("READ")
                 .build();
         userDetailsService.createUser(user);
         return userDetailsService;
